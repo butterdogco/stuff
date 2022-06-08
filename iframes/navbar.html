@@ -38,7 +38,7 @@
       padding: 10px;
       border: none;
       border-radius: 8px;
-      transition: 0.2s ease-in-out;
+      transition: 0.3s ease-in-out;
     }
     input:hover {
       background-color: #e9e9e9;
@@ -57,12 +57,22 @@
     }
     .frame {
       display: none;
-    }
-    .frame a {
       width: 100px;
       height: 100px;
+      transition: 0.7s ease-in-out;
+    }
+    .frame a {
       text-decoration: none;
       color: black;
+    }
+    .frame img {
+      height: 100%;
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    .frame:hover {
+      width: 140px;
     }
     .logo {
       display: none;
@@ -74,7 +84,7 @@
       -webkit-text-fill-color: transparent;
       text-align: center;
       transition: 0.4s ease-in-out;
-      cursor: wait;
+      cursor: default;
     }
     .logo:hover {
       font-size: 65px;
@@ -95,7 +105,17 @@
 <button id="button" onclick="myFunction()">Enter</button>
 <div class="frame" id="frame">
   <a onclick="object-1">
-    <img src="https://google.com/favicon.ico">
+    <img src="https://gamemedia.armorgames.com/18464/icn_heroimage.png">
+  </a>
+</div>
+<div class="frame" id="frame2">
+  <a onclick="object-2">
+    <img src="https://www.tastefulspace.com/wp-content/uploads/2022/02/unnamed-1.jpg">
+  </a>
+</div>
+<div class="frame" id="frame3">
+  <a onclick="object-3">
+    <img src="https://www.w3technic.com/wp-content/uploads/2022/03/feature-image-15-950x500.png">
   </a>
 </div>
 </center>
@@ -105,11 +125,13 @@ function myFunction() {
 	var password = "pass"
 	if (value === password) {
     	  alert('Correct');
-          document.getElementById('title').innerHTML = "Welcome to Butterblock 2.0";
+          document.getElementById('title').style.display = "none";
           document.getElementById('subtitle').style.display = "none";
           document.getElementById('input').style.display = "none";
           document.getElementById('button').style.display = "none";
-          document.getElementById('frame').style.display = "block";
+          document.getElementById('frame').style.display = "inline-block";
+          document.getElementById('frame2').style.display = "inline-block";
+          document.getElementById('frame3').style.display = "inline-block";
           document.getElementById('logo').style.display = "block";
        } else {
           alert("Incorrect, initiating self destruct.");
