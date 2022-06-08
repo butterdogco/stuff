@@ -1,7 +1,9 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Welcome</title>
+  <title>Dev Users Only</title>
+  <link rel="shortcut icon" href="https://butterdogco.github.io/img/favicon.ico">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
     @keyframes fadeIn {
@@ -104,29 +106,30 @@
 <input type="password" id="input"/>
 <button id="button" onclick="myFunction()">Enter</button>
 <div class="frame" id="frame">
-  <a onclick="object1">
-    <img src="https://gamemedia.armorgames.com/18464/icn_heroimage.png">
+  <a href="css/font1/docs/index.html">
+    <img onclick="object1()" src="1.png">
   </a>
 </div>
 <div class="frame" id="frame2">
-  <a onclick="object2">
-    <img src="https://www.tastefulspace.com/wp-content/uploads/2022/02/unnamed-1.jpg">
+  <a href="">
+    <img onclick="object2()" src="2.jpg">
   </a>
 </div>
 <div class="frame" id="frame3">
-  <a onclick="object3">
+  <a href="css/font2/index.html">
     <img src="https://www.w3technic.com/wp-content/uploads/2022/03/feature-image-15-950x500.png">
   </a>
 </div>
 <br>
-<iframe id="" src="https://slopegame.io/1.embed"/>
+<iframe id="first" src="https://or321.github.io/choppy-orc-autosplitter/"></iframe>
+<iframe id="iframe2" src="https://butterdogco.github.io/apps.html"></iframe>
+<iframe id="iframe3" src="https://butterdogco.github.io/"></iframe>
 </center>
 <script>
 function myFunction() {
 	var value = document.querySelector('input').value;
-	var password = "pass"
+	var password = "password"
 	if (value === password) {
-    	  alert('Correct');
           document.getElementById('title').style.display = "none";
           document.getElementById('subtitle').style.display = "none";
           document.getElementById('input').style.display = "none";
@@ -143,11 +146,24 @@ function myFunction() {
 </script>
 <script>
   function object1() {
-    var iframe = document.getElementById('iframe1').style.display;
-    if (iframe === none) {
-      iframe = "block";
+    var iframe = document.getElementById('iframe1').style
+    alert("1")
+  }
+  function object2() {
+    var iframe2 = document.getElementById('iframe2').style.display
+    if (iframe2 === none) {
+      iframe2 = "block";
     } else {
-      iframe = "none";
+      iframe2 = "none";
+    }
+  }
+  function object3() {
+    var iframe3 = document.getElementById('iframe3').style.display
+    iframe3 = block
+    if (iframe3 === none) {
+      iframe3 = "block";
+    } else {
+      iframe3 = "none";
     }
   }
   </script>
