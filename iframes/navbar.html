@@ -1,17 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Welcome</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @-moz-keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @-webkit-keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @-o-keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @-ms-keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
     body {
       background-color: white;
-      font-family: 'Google Sans', sans-serif !important;
+      font-family: 'Roboto', sans-serif !important;
       margin: 0;
+      -webkit-animation: fadeIn 1s;
+      -moz-animation: fadeIn 1s;
+      -o-animation: fadeIn 1s;
+      -ms-animation: fadeIn 1s;
     }
     input {
       background-color: #e3e3e3;
       padding: 10px;
       border: none;
       border-radius: 8px;
+      transition: 0.2s ease-in-out;
+    }
+    input:hover {
+      background-color: #e9e9e9;
     }
     button {
       padding: 10px;
@@ -34,22 +64,37 @@
       text-decoration: none;
       color: black;
     }
-    #logo {
+    .logo {
       display: none;
-      width: 400px;
-      height: 150px;
+      font-size: 60px;
+      margin-top: 50px;
+      font-family: 'Quicksand', sans-serif;
+      background: -webkit-linear-gradient(129deg, rgba(180,58,58,1) 0%, rgba(253,229,29,1) 25%, rgba(51,253,33,1) 50%, rgba(143,145,161,1) 75%, rgba(235,69,252,1) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      transition: 0.4s ease-in-out;
+      cursor: wait;
+    }
+    .logo:hover {
+      font-size: 65px;
+    }
+    iframe {
+      height: 640px;
+      width: 1080px;
+      display: none;
     }
   </style>
 </head>
 <body style="background-color: white !important; font-family: 'Google Sans';">
 <center>
-<img id="logo" src="">
+<p class="logo" id="logo">Welcome to ButterBlock 2.0</p>
 <h1 id="title" style="margin-top: 100px;">Welcome</h1>
 <h2 id="subtitle">Enter the Dev Access password to continue</h2>
 <input type="password" id="input"/>
 <button id="button" onclick="myFunction()">Enter</button>
 <div class="frame" id="frame">
-  <a onclick="object-one">
+  <a onclick="object-1">
     <img src="https://google.com/favicon.ico">
   </a>
 </div>
@@ -67,7 +112,8 @@ function myFunction() {
           document.getElementById('frame').style.display = "block";
           document.getElementById('logo').style.display = "block";
        } else {
-          alert("Incorrect, access lost.");
+          alert("Incorrect, initiating self destruct.");
+          document.body.style.display = "none";
     }
 }
 </script>
