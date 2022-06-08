@@ -104,20 +104,22 @@
 <input type="password" id="input"/>
 <button id="button" onclick="myFunction()">Enter</button>
 <div class="frame" id="frame">
-  <a onclick="object-1">
+  <a onclick="object1">
     <img src="https://gamemedia.armorgames.com/18464/icn_heroimage.png">
   </a>
 </div>
 <div class="frame" id="frame2">
-  <a onclick="object-2">
+  <a onclick="object2">
     <img src="https://www.tastefulspace.com/wp-content/uploads/2022/02/unnamed-1.jpg">
   </a>
 </div>
 <div class="frame" id="frame3">
-  <a onclick="object-3">
+  <a onclick="object3">
     <img src="https://www.w3technic.com/wp-content/uploads/2022/03/feature-image-15-950x500.png">
   </a>
 </div>
+<br>
+<iframe id="" src="https://slopegame.io/1.embed"/>
 </center>
 <script>
 function myFunction() {
@@ -139,5 +141,15 @@ function myFunction() {
     }
 }
 </script>
+<script>
+  function object1() {
+    var iframe = document.getElementById('iframe1').style.display;
+    if (iframe === none) {
+      iframe = "block";
+    } else {
+      iframe = "none";
+    }
+  }
+  </script>
 </body>
 </html>
